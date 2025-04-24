@@ -1,3 +1,5 @@
+//React Hook Form is a lightweight and performant library for building and managing forms in React. It uses React hooks to simplify form handling, reduce boilerplate code, and improve performance.
+
 import {
   FormItem,
   FormLabel,
@@ -16,6 +18,7 @@ interface FormFieldProps<T extends FieldValues> {
   type?: "text" | "email" | "password" | "file";
 }
 
+// Define the props for the FormField component using generics for type safety
 const FormField = ({
   control,
   name,
@@ -25,6 +28,7 @@ const FormField = ({
 }: FormFieldProps<T>) => {
   return (
     <div>
+      {/* Use Controller to connect the input field with React Hook Form */}
       <Controller
         name={name}
         control={control}
@@ -32,6 +36,7 @@ const FormField = ({
           <FormItem>
             <FormLabel className="label">{label}</FormLabel>
             <FormControl>
+              {/* field -- Provides all the props needed for React Hook Form to manage this input.*/}
               <Input
                 className="input"
                 placeholder={placeholder}
