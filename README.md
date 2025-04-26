@@ -21,7 +21,6 @@
 ## 🚀 Technologies Used
 
 * **[Next.js](https://nextjs.org/):** The React framework for building performant and scalable web applications with server-side rendering and excellent developer experience.
-* **[Vercel API Routes](https://vercel.com/docs/functions/serverless-functions):** Serverless functions to handle backend logic and API interactions.
 * **[Firebase](https://firebase.google.com/):** A comprehensive platform providing authentication, database (Firestore), and storage solutions.
 * **[Tailwind CSS](https://tailwindcss.com/):** A utility-first CSS framework for rapid UI development and consistent styling.
 
