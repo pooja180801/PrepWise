@@ -6,9 +6,9 @@ import {ReactNode} from 'react'
 
 const RootLayout = async({children}: {children: ReactNode}) => {
 
-  const isUserAuthentocated = await isAuthenticated();
+  const isUserAuthenticated = await isAuthenticated();
 
-  if(!isUserAuthentocated){
+  if(!isUserAuthenticated){
     redirect('sign-in');
   }
 
