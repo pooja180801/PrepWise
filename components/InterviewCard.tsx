@@ -5,8 +5,9 @@ import { getRandomInterviewCover } from "@/lib/utils";
 import { Button } from "./ui/button";
 import Link from "next/link";
 import DisplayTechStack from "./DisplayTechStack";
+import { getFeedbackByInterviewId } from "@/lib/actions/general.action";
 
-const InterviewCard = ({
+const InterviewCard = async ({
   id,
   userId,
   role,
@@ -14,7 +15,7 @@ const InterviewCard = ({
   techstack,
   createdAt,
 }: InterviewCardProps) => {
-  const feedback = null as Feedback | null;
+  const feedback = userId && id ? await getFeedbackByInterviewId({ interviewId: id, userId }) : null;
 
   // if the type is something like "Technical - Mix" or "Mix - Technical", we need to normalize it to "Mixed"
   // g-global i-case insensitive

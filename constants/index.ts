@@ -155,6 +155,11 @@ End the conversation on a polite and positive note.
   },
 };
 
+//This code defines a Zod schema called feedbackSchema, which validates a structured feedback object
+//
+//Zod is a TypeScript-first schema declaration and validation library. 
+//You define the shape of your data, and Zod ensures it matches.
+
 export const feedbackSchema = z.object({
   totalScore: z.number(),
   categoryScores: z.tuple([
