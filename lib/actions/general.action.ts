@@ -120,7 +120,7 @@ export async function getFeedbackByInterviewId(
 
     if(feedback.empty) return null;
 
-    const feedbackDoc = feedback.docs[0];
+    const feedbackDoc = feedback.docs[feedback.docs.length - 1];
 
     return {
       id: feedbackDoc.id,
